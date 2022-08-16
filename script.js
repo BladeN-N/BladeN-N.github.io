@@ -25,9 +25,10 @@ const switchPlayer = function() {
 }
 
 // Starter 
+let playing, scores, currentScore, activePlayer
 
 const init = function() {
-    const scores = [0, 0];
+    scores = [0, 0];
     score0El.textContent = 0;
     score1El.textContent = 0;
     current0El.textContent = 0;
@@ -37,9 +38,9 @@ const init = function() {
     player0El.classList.add('player--active');
     player1El.classList.remove('player--active');
     diceEl.classList.add('hidden');
-    let currentScore = 0;
-    let activePlayer = 0;
-    let playing = true;
+    currentScore = 0;
+    activePlayer = 0;
+    playing = true;
 }
 // Beggining
 
@@ -80,7 +81,7 @@ diceHoldBtn.addEventListener('click', function() {
 
 newGameBtn.addEventListener('click', function () {
     init();
-})
+});
 
 
 
